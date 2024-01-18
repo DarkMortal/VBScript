@@ -5,6 +5,7 @@ const apiKey = "your_api_key"
 currencies = Array("USD","EUR","INR","JPY","RUB","CNY")
 url = "http://api.exchangeratesapi.io/v1/latest?access_key="&apiKey&"&symbols="&Join(currencies,",")
 
+'CreateObject("WinHttp.WinHttpRequest.5.1") also works
 Set req = CreateObject("MSXML2.XMLHTTP")
 Call req.open("GET", url, False)
 Call req.send()
